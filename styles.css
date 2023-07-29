@@ -1,0 +1,193 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+.search{
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+input, button, i{
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+.search img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+.search .content{
+    color: #fff;
+    position: relative;
+    text-align: center;
+    z-index: 2;
+}
+.search h1{
+    font-size: 2.65rem;
+    font-weight: 600;
+}
+.search p{
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+.search .search-box{
+    height: 55px;
+    margin: 45px 0;
+}
+.search-box img{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-top: 15px;
+}
+.search-box input{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    padding-left: 55px;
+    font-size: 1.5rem;
+    border-radius: 5px;
+}
+.gallery{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.gallery .images{
+    gap: 15px;
+    max-width: 90%;
+    margin-top: 40px;
+    columns: 5 340px;
+}
+.images .card{
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    list-style: none;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+.images .card .details{
+    position: absolute;
+    bottom: -100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    width: 100%;
+    transition: bottom 0.1s ease;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+}
+.images .card:hover .details{
+    bottom: 0;
+
+}
+.photographer{
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+.card .details button{
+    cursor: pointer;
+
+    padding: 3px 8px;
+    font-size: 1.1rem;
+    background: #fff;
+}
+.photographer i {
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+.photographer span{
+    font-size: 1.05rem;
+
+}
+.images img{
+    width: 100%;
+}
+.gallery .load-images{
+    margin: 50px 0;
+    font-size: 1.2rem;
+    color: #fff;
+    cursor: pointer;
+
+    background: rgb(249, 108, 174);
+    padding: 10px 20px;
+}
+.gallery .load-images.disabled{
+    opacity: 0.6;
+    pointer-events: none;
+    
+}
+.lightbox{
+    position: fixed;
+    display: none;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.65);
+}
+.wrapper header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header .photographer{
+    color: #333;
+}
+header .photographer i{
+    font-size: 1.7rem;
+
+}
+header .photographer span{
+    font-size: 1.2rem;
+
+}
+header .buttons i{
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    background: #8a6cff;
+    display: inline-block;
+}
+.buttons i:last-child{
+    margin-left: 10px;
+    background: grey;
+}
+.lightbox .wrapper{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    background: #fff;
+    padding: 20px;
+    max-width: 850px;
+    border-radius: 5px;
+    transform: translate(-50%,-50%);
+}
+.preview-img{
+    display: flex;
+    margin-top: 25px;
+    justify-content: center;
+}
+.wrapper .preview-img .img{
+    max-height: 70vh;
+    max-width: 90vh;
+}
+.preview-img .img img{
+    width:100%;
+    height: 100%;
+    object-fit: contain;
+}
